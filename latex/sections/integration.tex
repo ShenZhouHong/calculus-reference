@@ -1,0 +1,99 @@
+\section{Integration}
+Remember to always include the constant of integration \(+\ C\) when evaluating indefinite integrals.
+\begin{align*}
+    \int x^n \, dx      &= \frac{x^{n+1}}{n+1} \ (n \neq -1 )&
+    \int e^x \, dx      &= e^x &
+    \int \frac{1}{x} \, dx &= \ln |x| &
+    \int \ln x \, dx    &= x \ln x - x &
+    \int b^x \, dx      &= \frac{b^x}{\ln b}
+\end{align*}
+
+
+\subsection{Integration by Parts}
+For choice of \( u \): use the mnemonic LIATE: Logarithmic, Inverse-trigonometric, Algebraic, Trigonometric, Exponential.
+
+\begin{align*}
+    \int u \, dv &= uv - \int v \, du & \int f(x) g'(x) \, dx &= f(x) g(x) - \int f'(x) g(x) \, dx
+\end{align*}
+
+% \subsection{Integration by Substitution}
+% \begin{align*}
+% \int f(g(x))g'(x)\, dx &= \int f(u)\, du, \quad \text{where } u = g(x)
+% \end{align*}
+
+% \subsection{Integrals of Logarithmic and Exponential Functions}
+% \begin{align*}
+%     \int e^x \, dx      &= e^x + C &
+%     \int \ln x \, dx    &= x \ln x - x + C &
+%     \int b^x \, dx      &= \frac{1}{\ln b} b^x + C
+% \end{align*}
+
+\subsection{Integrals of Trigonometric Functions (and Hyperbolic Functions)}
+\begin{align*}
+    % Integrals of "ordinary" trigonometric functions
+    &\int \sin x \, dx = -\cos x + C &&
+    \int \cos x \, dx = \sin x + C &&
+    \int \sec^2 x \, dx = \tan x + C \\
+    % Slightly more obscure ones
+    &\int \csc^2 x \, dx = -\cot x + C &&
+    \int \sec x \tan x \, dx = \sec x + C &&
+    \int \csc x \cot x \, dx = -\csc x + C \\
+    % Integrals that yield functions of natural logs, hyperbolic functions
+    &\int \sec x \, dx = \ln |\sec x + \tan x | + C &&
+    \int \tan x \, dx = \ln |\sec x | + C  &&
+    \int \sinh x \, dx = \cosh x + C \\
+    &\int \csc x \, dx = \ln |\csc x - \cot x | + C &&
+    \int \cot x \, dx = \ln |\sin x | + C &&
+    \int \cosh x \, dx = \sinh x + C
+\end{align*}
+
+\subsection{Integrals that yield Inverse Trigonometric Functions}
+\begin{align*}
+    \int \frac{dx}{\sqrt{a^2-x^2}} &= \sin^{-1} \left( \frac{x}{a} \right) + C & 
+    \int \frac{dx}{a^2+x^2} &= \frac{1}{a} \tan^{-1} \left( \frac{x}{a} \right) + C &
+    \int \frac{dx}{x \sqrt{x^2-a^2}} &= \frac{1}{a} \sec^{-1} \left| \frac{x}{a} \right| + C
+\end{align*}
+
+\subsection{Reduction Formulas for $\sin$ and $\cos$}
+\begin{align*}
+    \int \sin^n x \, dx &= -\frac{1}{n} \sin^{n-1} x \cos x + \frac{n-1}{n} \int \sin^{n-2} x \, dx &
+    \int \cos^n x \, dx &= +\frac{1}{n} \cos^{n-1} x \sin x + \frac{n-1}{n} \int \cos^{n-2} x \, dx
+\end{align*}
+
+\subsection{Half-Angle Identities}
+\begin{align*}
+    \cos^2 x &= \frac{1}{2} (1 + \cos 2x) &
+    \sin^2 x &= \frac{1}{2} (1 - \cos 2x) &
+    \sin x \cos x &= \frac{1}{2} \sin 2x
+\end{align*}
+
+\subsection{Trigonometric Identities for Evaluating Integrals of Products of Trigonometric Powers}
+
+\begin{align*}
+    % Labels
+    & \cos^n \textbf{ is odd, use } u=\sin x &&
+    \sin^n \ \textbf{is odd, use }   u = \cos x &&
+    \sec^n \ \textbf{is even, use }  u = \tan x &&
+    \tan^n \ \textbf{is odd, use }   u = \sec x \\
+    % Substitution identities
+    & \cos^2 x = (1 - \sin^2 x) &&
+    \sin^2 x = (1 - \cos^2 x) &&
+    \sec^2 x = (1 + \tan^2 x) &&
+    \tan^2 x = (\sec^2 x - 1)
+\end{align*}
+
+
+\subsection{Product Identities for Trigonometric Products of $\sin$, $\cos$}
+\begin{align*}
+\sin A \cos B &= \frac{\sin(A-B) + \sin(A+B)}{2} &
+\cos A \cos B &= \frac{\cos(A-B) + \cos(A+B)}{2} &
+\sin A \sin B &= \frac{\cos(A-B) - \cos(A+B)}{2}
+\end{align*}
+
+\subsection{Trigonometric Substitutions}
+\begin{align*}
+    \textbf{Expression} && \textbf{Substitution} && \textbf{Domain} && \textbf{Identity} \\
+    \int \sqrt{a^2-x^2} \, dx &&  x = a \sin \theta, && -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2} && 1 - \sin^2 \theta = \cos^2 \theta \\
+    \int \sqrt{a^2+x^2} \, dx &&  x = a \tan \theta, && -\frac{\pi}{2} < \theta < \frac{\pi}{2} && 1 + \tan^2 \theta = \sec^2 \theta \\
+    \int \sqrt{x^2-a^2} \, dx &&  x = a \sec \theta, && 0 \leq \theta < \frac{\pi}{2} && \sec^2 \theta - 1 = \tan^2 \theta 
+\end{align*}

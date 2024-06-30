@@ -1,5 +1,5 @@
 # List of named documents to build. Add one for every seperate LaTeX document root
-TARGETS := paper.pdf
+TARGETS := calculus-reference.pdf
 
 # Specify LaTeX source directory & destination directory for compiled PDFs
 SRC_DIR  = latex/

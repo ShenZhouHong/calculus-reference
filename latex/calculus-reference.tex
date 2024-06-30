@@ -18,31 +18,26 @@
 % https://texblog.org/2013/02/13/latex-documentclass-options-illustrated/#formula
 \documentclass[
   protrudelabels,
-  onehalfspacing,
+  singlespacing,
   extraligatures,
   notitlepage,
   english,
-  widemargins
+  letterpaper,
+  10pt
 ]{humanize}
 
 \input{configuration.tex}
 
 % Document Title, Author, and Date
-\title{
-  \LaTeX\ Essay Template
-}
-\author{
-  Shen Zhou Hong \and Institution
-}
+\title{Calculus Formula Reference}
+\author{Shen Zhou Hong}
 \date{\today}
+
 
 % Document Begins
 \begin{document}
-\maketitle
-\tableofcontents
 
-\include{sections/body.tex}
-
-\include{sections/endpage.tex}
+\input{sections/differentiation.tex}
+\input{sections/integration.tex}
 
 \end{document}
